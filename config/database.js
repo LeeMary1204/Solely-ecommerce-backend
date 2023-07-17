@@ -1,8 +1,11 @@
 const mongoose = require("mongoose");
 
+const uri = "mongodb+srv://root:root@ecommerce-1.xxaqhpo.mongodb.net/ecommerce-1?retryWrites=true&w=majority";
+
+
 const connectDatabase = () => {
     mongoose
-        .connect('mongodb://127.0.0.1:27017/ecommerce', {
+        .connect(uri, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true,
